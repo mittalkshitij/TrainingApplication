@@ -1,12 +1,14 @@
 package com.example.testapplication
 
+import android.R.layout
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
+import android.view.Gravity
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,16 +20,12 @@ class MainActivity : AppCompatActivity() {
         var userNameEditText =findViewById<EditText>(R.id.usernameEditText)
         var passwordEditText =findViewById<EditText>(R.id.passwordEditText)
         var loginButton = findViewById<AppCompatButton>(R.id.loginButton)
-
-
-
-
-
+        var signButton=findViewById<AppCompatButton>(R.id.signButton)
 
             loginButton.setOnClickListener {
 
-                var username= userNameEditText.text.toString()
-                var password=passwordEditText.text.toString()
+                var username: String?= userNameEditText?.text.toString()
+                var password: String?=passwordEditText?.text.toString()
 
                 if (username == "abc" && password == "xyz") {
 
@@ -42,9 +40,20 @@ class MainActivity : AppCompatActivity() {
                     startActivity(intent)
 
                 } else {
-                    Toast.makeText(this, "Login Failed", Toast.LENGTH_LONG).show()
+
+                    val toast = Toast(applicationContext)
+                    toast.setText("Login Failed")
+                    toast.duration = Toast.LENGTH_LONG
+                    toast.setGravity(Gravity.NO_GRAVITY,0,0)
+                    toast.show()
                 }
             }
+
+        signButton.setOnClickListener {
+
+            var intent=Intent(this,SignUpActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
 

@@ -34,7 +34,7 @@ class SecondActivity : AppCompatActivity() {
 
         nextButton.setOnClickListener {
 
-            var intent= Intent(this,LogoutActivity::class.java)
+            var intent= Intent(this,OpeningActivity::class.java)
             startActivity(intent)
         }
 

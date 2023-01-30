@@ -41,10 +41,9 @@ class MainActivity : AppCompatActivity() {
 
                 } else {
 
-                    val toast = Toast(applicationContext)
+                    val toast = Toast(this)
                     toast.setText("Login Failed")
                     toast.duration = Toast.LENGTH_LONG
-                    toast.setGravity(Gravity.NO_GRAVITY,0,0)
                     toast.show()
                 }
             }

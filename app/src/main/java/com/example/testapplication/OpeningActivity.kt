@@ -158,7 +158,7 @@ class OpeningActivity : AppCompatActivity() {
 
         notificationButton.setOnClickListener {
 
-            val intent = Intent(this, SecondActivity::class.java)
+            //val intent = Intent(this, SecondActivity::class.java)
             val channelId = "notifications"
             val description = "Test notification"
             lateinit var notificationManager: NotificationManager
@@ -179,23 +179,20 @@ class OpeningActivity : AppCompatActivity() {
                     .setContentIntent(pendingIntent)
             }
 
-            var builder = AlertDialog.Builder(this)
+            AlertDialog.Builder(this)
                 .setTitle("Exit Application")
                 .setMessage("Are you sure?")
                 .setCancelable(false)
-
-
                 .setPositiveButton("Yes", DialogInterface.OnClickListener {
-                        dialogInterface, i ->
-
+                        _, _ ->
 
                     notificationManager.notify(1234, notificationBuilder.build())
-                    this.startActivity(intent)
+//                    this.startActivity(intent)
                 })
                 .setNegativeButton("NO", DialogInterface.OnClickListener {
-                        dialogInterface, i ->
+                        _, _ ->
 
-                })
+                }).create().show()
         }
 
 

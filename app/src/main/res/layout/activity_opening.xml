@@ -11,12 +11,12 @@
         android:id="@+id/mapsButton"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="135dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/roundedbutton"
         android:text="Open Google Maps"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -62,8 +62,8 @@
         android:id="@+id/nextButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="61dp"
-        android:layout_marginBottom="161dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="88dp"
         android:background="@drawable/roundedbutton"
         android:text="Next"
         android:textColor="@color/white"
@@ -82,4 +82,42 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calculatorButton" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/alertButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:background="@drawable/roundedbutton"
+        android:text="Alert Dialogue"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailButton" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/customAlertButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/roundedbutton"
+        android:text="Custom Alert Dialogue"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alertButton" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/notificationButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:textColor="@color/white"
+        android:background="@drawable/roundedbutton"
+        android:text="Send Notification"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/customAlertButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>
